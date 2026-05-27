@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="100%" height="100%" fill="none">
+  <!-- Group for entire logo -->
+  <g fill="currentColor">
+    <!-- === ROW 1: "rpc" === -->
+    
+    <!-- LETTER R -->
+    <!-- Left vertical stem -->
+    <rect x="30" y="30" width="28" height="70" rx="14" />
+    <!-- Branch connection bubble -->
+    <rect x="42" y="30" width="45" height="28" rx="14" />
+    <!-- Extra smoothing circular node for r branch -->
+    <circle cx="80" cy="55" r="14" />
+
+    <!-- LETTER P -->
+    <!-- Left vertical stem -->
+    <rect x="105" y="30" width="28" height="70" rx="14" />
+    <!-- Loop bubble block -->
+    <rect x="119" y="30" width="45" height="48" rx="20" />
+    <!-- Inner punch out hole (using mask or overlaying black, but since we want color-adaptive, we use standard path or layered shape) -->
+    <!-- Wait! To make it robust without hardcoding black, we can draw a path with an inner subpath (evenodd rule) or a neat mask.
+         Even better, let's define standard path coordinates for P and C to keep it clean and truly hollow! -->
+    
+    <!-- LETTER C -->
+    <!-- We can write the C as a path that curves perfectly -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M 215 30 
+             C 240 30, 255 45, 255 65 
+             C 255 85, 240 100, 215 100 
+             C 190 100, 175 85, 175 65 
+             C 175 45, 190 30, 215 30 Z 
+             M 215 54 
+             C 205 54, 201 58, 201 65 
+             C 201 72, 205 76, 215 76 
+             C 225 76, 229 72, 229 65 
+             C 229 58, 225 54, 215 54 Z" />
+    <!-- To make C open on the right, we overlay or define it. Oh, C is open in the logo!
+         Let's draw C as an open shape. Path: -->
+    <!-- Let's replace the C with a proper open C path -->
+    
+    <!-- === ROW 2: "ätupc" === -->
+    <!-- LETTER ä -->
+    <!-- Main bubble stem and body -->
+    <rect x="30" y="130" width="22" height="40" rx="11" />
+    <rect x="40" y="148" width="24" height="22" rx="11" />
+    <!-- Two umlaut dots -->
+    <circle cx="34" cy="114" r="5.5" />
+    <circle cx="48" cy="114" r="5.5" />
+
+    <!-- LETTER t -->
+    <!-- Vertical stem -->
+    <rect x="76" y="122" width="22" height="48" rx="11" />
+    <!-- Horizontal bar -->
+    <rect x="68" y="134" width="34" height="20" rx="10" />
+
+    <!-- LETTER u -->
+    <!-- Left vertical -->
+    <rect x="114" y="130" width="22" height="32" rx="11" />
+    <!-- Right vertical -->
+    <rect x="138" y="130" width="22" height="40" rx="11" />
+    <!-- Bottom curve -->
+    <rect x="122" y="148" width="26" height="22" rx="11" />
+
+    <!-- LETTER p -->
+    <rect x="172" y="130" width="22" height="40" rx="11" />
+    <rect x="180" y="130" width="24" height="28" rx="11" />
+
+    <!-- LETTER c -->
+    <rect x="216" y="130" width="22" height="40" rx="11" />
+    <rect x="226" y="130" width="20" height="20" rx="10" />
+    <rect x="226" y="150" width="20" height="20" rx="10" />
+  </g>
+
+  <!-- Clean geometric path overrides for maximum fidelity matching the exact bubbly letters of the image -->
+  <!-- Let's construct the P and C in high-fidelity custom paths to match the exact bubble aesthetics -->
+  <g fill="currentColor">
+    <!-- P loop overlay connector -->
+    <path d="M 125 30 H 155 C 168 30, 168 78, 155 78 H 125 Z M 133 46 V 62 H 145 C 151 62, 151 46, 145 46 Z" fill-rule="evenodd" />
+    <!-- C shape curved custom bubble -->
+    <path d="M 235 30 H 205 C 188 30, 188 100, 205 100 H 235 C 243 100, 245 88, 235 88 H 208 C 200 88, 200 42, 208 42 H 235 C 245 42, 243 30, 235 30 Z" fill-rule="evenodd" />
+  </g>
+</svg>

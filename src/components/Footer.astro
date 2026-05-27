@@ -1,0 +1,288 @@
+---
+import Logo from './Logo.astro';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer-section">
+  <div class="footer-wrapper">
+
+    <!-- Top row: Brand + Quick Links + Social -->
+    <div class="footer-grid">
+
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <img src="/logorpcatupc2.0.svg" alt="rpc atupc" width="150" height="75" />
+        <p class="footer-tagline">
+          Servicio técnico de alta tecnología en Concepción, Chile. Reparación,
+          optimización y upgrades de élite.
+        </p>
+        <!-- WhatsApp floating CTA -->
+        <a
+          href="https://wa.me/56921987696?text=Hola%20rpc%20atupc!%20Necesito%20información%20sobre%20sus%20servicios."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-pill primary footer-wa-btn"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.099.546 4.07 1.499 5.786L0 24l6.394-1.679A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.013-1.373l-.36-.214-3.732.979.998-3.648-.235-.374A9.818 9.818 0 1 1 12 21.818z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- Links column -->
+      <div class="footer-links-col">
+        <h4 class="footer-col-title">Navegación</h4>
+        <nav class="footer-nav">
+          <a href="#inicio" class="footer-link">Inicio</a>
+          <a href="#servicios" class="footer-link">Servicios</a>
+          <a href="#nosotros" class="footer-link">Nosotros</a>
+          <a href="#contacto" class="footer-link">Contacto</a>
+          <a href="#ubicacion" class="footer-link">Ubicación</a>
+        </nav>
+      </div>
+
+      <!-- Services column -->
+      <div class="footer-links-col">
+        <h4 class="footer-col-title">Servicios</h4>
+        <nav class="footer-nav">
+          <a href="https://wa.me/56921987696?text=Hola%20rpc%20atupc!%20Quiero%20cotizar%20una%20Reparación%20Técnica." target="_blank" rel="noopener" class="footer-link">Reparación Técnica</a>
+          <a href="https://wa.me/56921987696?text=Hola%20rpc%20atupc!%20Quiero%20cotizar%20una%20Optimización%20de%20Velocidad." target="_blank" rel="noopener" class="footer-link">Optimización</a>
+          <a href="https://wa.me/56921987696?text=Hola%20rpc%20atupc!%20Quiero%20cotizar%20un%20Mantenimiento%20y%20Limpieza." target="_blank" rel="noopener" class="footer-link">Limpieza</a>
+          <a href="https://wa.me/56921987696?text=Hola%20rpc%20atupc!%20Quiero%20cotizar%20un%20Upgrade%20de%20componentes." target="_blank" rel="noopener" class="footer-link">Upgrades</a>
+          <a href="https://wa.me/56921987696?text=Hola%20rpc%20atupc!%20Quiero%20cotizar%20un%20Armado%20de%20PC%20a%20medida." target="_blank" rel="noopener" class="footer-link">Armado de PC</a>
+        </nav>
+      </div>
+
+      <!-- Contact column -->
+      <div class="footer-links-col">
+        <h4 class="footer-col-title">Contacto</h4>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+56 9 2198 7696</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Concepción, Chile</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Lun-Sáb · 9:00 - 19:00</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom divider and copyright -->
+    <div class="footer-bottom">
+      <div class="footer-divider"></div>
+      <div class="footer-bottom-row">
+        <p class="footer-copyright">
+          © {currentYear} rpc atupc. Todos los derechos reservados.
+        </p>
+        <p class="footer-made">
+          Diseñado con
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="var(--accent-amber)" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          en Chile
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Floating WhatsApp button (always visible) -->
+<a
+  href="https://wa.me/56921987696?text=Hola%20rpc%20atupc!%20Necesito%20información%20sobre%20sus%20servicios."
+  target="_blank"
+  rel="noopener noreferrer"
+  class="floating-wa"
+  aria-label="Contactar por WhatsApp"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.099.546 4.07 1.499 5.786L0 24l6.394-1.679A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.013-1.373l-.36-.214-3.732.979.998-3.648-.235-.374A9.818 9.818 0 1 1 12 21.818z"/></svg>
+</a>
+
+<style>
+  .footer-section {
+    padding: 60px 20px 0;
+    position: relative;
+    background: var(--bg-matte);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  .footer-wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 48px;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-tagline {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 300px;
+  }
+
+  .footer-wa-btn {
+    align-self: flex-start;
+    padding: 10px 20px;
+    font-size: 0.78rem;
+    margin-top: 4px;
+  }
+
+  .footer-col-title {
+    font-family: var(--font-tech);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-link {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    opacity: 0.7;
+    transition: var(--transition-fast);
+  }
+
+  .footer-link:hover {
+    opacity: 1;
+    color: var(--accent-amber);
+    padding-left: 4px;
+  }
+
+  .footer-contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+  }
+
+  .footer-contact-item svg {
+    color: var(--accent-amber);
+    flex-shrink: 0;
+  }
+
+  /* Bottom bar */
+  .footer-bottom {
+    padding: 24px 0;
+  }
+
+  .footer-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+    margin-bottom: 24px;
+  }
+
+  .footer-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-copyright {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    opacity: 0.6;
+  }
+
+  .footer-made {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    opacity: 0.6;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* Floating WhatsApp button */
+  .floating-wa {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+    transition: var(--transition-smooth);
+    animation: wa-pulse 2.5s infinite;
+  }
+
+  .floating-wa:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+  }
+
+  @keyframes wa-pulse {
+    0%, 100% { box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6), 0 0 0 12px rgba(37, 211, 102, 0.08); }
+  }
+
+  /* Responsive */
+  @media (max-width: 850px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .footer-section {
+      padding: 40px 16px 0;
+    }
+
+    .footer-bottom-row {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .floating-wa {
+      bottom: 20px;
+      right: 20px;
+      width: 54px;
+      height: 54px;
+    }
+  }
+</style>

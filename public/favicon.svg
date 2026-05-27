@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none">
+  <!-- Outer border -->
+  <rect x="2" y="2" width="28" height="28" rx="8" stroke="#FF6B00" stroke-width="2" fill="#07080A" />
+  
+  <!-- Central circuit bubble -->
+  <rect x="10" y="10" width="12" height="12" rx="4" fill="#FF6B00" />
+  
+  <!-- Connecting nodes -->
+  <circle cx="16" cy="6" r="2" fill="#FF6B00" />
+  <circle cx="16" cy="26" r="2" fill="#FF6B00" />
+  <circle cx="6" cy="16" r="2" fill="#FF6B00" />
+  <circle cx="26" cy="16" r="2" fill="#FF6B00" />
+  
+  <!-- Traces -->
+  <path d="M 16 8 L 16 10 M 16 22 L 16 24 M 8 16 L 10 16 M 22 16 L 24 16" stroke="#FF6B00" stroke-width="2" stroke-linecap="round" />
+</svg>

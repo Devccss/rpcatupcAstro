@@ -1,0 +1,313 @@
+---
+const services = [
+  {
+    id: "reparacion",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
+    label: "Reparación Técnica",
+    desc: "Diagnóstico completo y reparación de fallas eléctricas, de placa madre, fuente de poder y todos los componentes críticos.",
+    tag: "DIAGNÓSTICO INCLUIDO",
+    whatsapp: "Hola rpc atupc! Necesito cotizar una *Reparación Técnica* para mi equipo. Me gustaría que me contacten para coordinar.",
+  },
+  {
+    id: "optimizacion",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`,
+    label: "Optimización de Velocidad",
+    desc: "Limpieza de sistema, optimización de inicio, actualización de drivers y ajuste fino para máximo rendimiento en Windows.",
+    tag: "RENDIMIENTO +200%",
+    whatsapp: "Hola rpc atupc! Necesito cotizar una *Optimización de Velocidad* para mi computador. Me gustaría que me contacten.",
+  },
+  {
+    id: "limpieza",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+    label: "Mantenimiento y Limpieza",
+    desc: "Limpieza profunda de polvo, cambio de pasta térmica de alto rendimiento en CPU y GPU para temperaturas óptimas.",
+    tag: "PROLONGA LA VIDA ÚTIL",
+    whatsapp: "Hola rpc atupc! Necesito cotizar un *Mantenimiento y Limpieza* para mi equipo. Me gustaría que me contacten.",
+  },
+  {
+    id: "upgrades",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
+    label: "Upgrades y Componentes",
+    desc: "Instalación de SSD NVMe, ampliación de RAM, actualización de GPU o CPU para llevar tu equipo al siguiente nivel.",
+    tag: "COMPONENTES GARANTIZADOS",
+    whatsapp: "Hola rpc atupc! Necesito cotizar *Upgrades de Componentes* para mi equipo. Me gustaría que me contacten.",
+  },
+  {
+    id: "armado",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M5.34 18.66l-1.41 1.41M20 12h-2M6 12H4M19.07 19.07l-1.41-1.41M5.34 5.34L3.93 3.93"/></svg>`,
+    label: "Armado de Computadores",
+    desc: "Ensamblado profesional de PC a medida con cable management impecable, selección de componentes compatibles y prueba de estrés.",
+    tag: "PC A TU MEDIDA",
+    whatsapp: "Hola rpc atupc! Estoy interesado en un *Armado de Computador* personalizado. Me gustaría que me contacten para asesoría.",
+  },
+  {
+    id: "formateo",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.85"/></svg>`,
+    label: "Formateo e Instalación",
+    desc: "Formateo profesional, instalación limpia de Windows o Linux, configuración de drivers y activación de software esencial.",
+    tag: "SISTEMA LIMPIO",
+    whatsapp: "Hola rpc atupc! Necesito cotizar un *Formateo e Instalación de Sistema Operativo*. Me gustaría que me contacten.",
+  },
+];
+---
+
+<section class="services-section" id="servicios">
+  <div class="services-wrapper">
+
+    <!-- Section Header -->
+    <div class="section-header">
+      <div class="glow-badge">
+        <span class="dot"></span>
+        Catálogo de Servicios
+      </div>
+      <h2 class="section-title">¿Qué necesita<br/><span class="title-accent">tu equipo?</span></h2>
+      <p class="section-desc">
+        Selecciona el servicio que necesitas y te abriremos un chat de WhatsApp con toda la información lista.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="services-grid">
+      {services.map((service, index) => (
+        <div class={`service-card ${index === 0 ? 'service-card--featured' : ''}`} data-service-id={service.id}>
+          <div class="card-inner">
+            <div class="card-top">
+              <div class="service-icon">
+                <Fragment set:html={service.icon} />
+              </div>
+              <span class="service-tag">{service.tag}</span>
+            </div>
+            <h3 class="service-name">{service.label}</h3>
+            <p class="service-desc">{service.desc}</p>
+          </div>
+          <a
+            href={`https://wa.me/56921987696?text=${encodeURIComponent(service.whatsapp)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-pill service-cta-btn"
+            aria-label={`Cotizar ${service.label} por WhatsApp`}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.099.546 4.07 1.499 5.786L0 24l6.394-1.679A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.013-1.373l-.36-.214-3.732.979.998-3.648-.235-.374A9.818 9.818 0 1 1 12 21.818z"/></svg>
+            Cotizar Ahora
+          </a>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .services-section {
+    padding: 100px 20px;
+    position: relative;
+  }
+
+  .services-wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+  }
+
+  .section-title {
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--text-pure);
+    text-transform: uppercase;
+  }
+
+  .section-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+
+  /* Services Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* Service Card */
+  .service-card {
+    background: var(--bg-matte);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-card);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    cursor: default;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 0% 0%, rgba(255,107,0,0.04) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+  .service-card:hover {
+    border-color: rgba(255, 107, 0, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(255,107,0,0.04);
+  }
+
+  .service-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Featured Card (accent white) */
+  .service-card--featured {
+    background: var(--accent-white);
+    border-color: transparent;
+  }
+
+  .service-card--featured .service-name,
+  .service-card--featured .service-icon {
+    color: var(--text-dark);
+  }
+
+  .service-card--featured .service-desc {
+    color: rgba(7, 8, 10, 0.65);
+  }
+
+  .service-card--featured .service-tag {
+    color: var(--accent-amber);
+    background: rgba(255, 107, 0, 0.1);
+    border-color: rgba(255, 107, 0, 0.2);
+  }
+
+  .service-card--featured .service-cta-btn {
+    background: var(--bg-space);
+    color: var(--text-pure);
+    border-color: transparent;
+  }
+
+  .service-card--featured .service-cta-btn:hover {
+    background: var(--accent-amber);
+    color: var(--bg-space);
+    box-shadow: 0 0 20px rgba(255,107,0,0.3);
+  }
+
+  .service-card--featured:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border-color: transparent;
+  }
+
+  .service-card--featured::before {
+    display: none;
+  }
+
+  .card-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    color: var(--accent-amber);
+    flex-shrink: 0;
+  }
+
+  .service-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .service-tag {
+    font-family: var(--font-tech);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    padding: 4px 10px;
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+
+  .service-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-pure);
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .service-desc {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+  }
+
+  /* CTA Button inside card */
+  .service-cta-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 20px;
+    font-size: 0.82rem;
+    width: 100%;
+    justify-content: center;
+    border-radius: var(--radius-card);
+    transition: var(--transition-smooth);
+  }
+
+  .service-cta-btn:hover {
+    background: var(--accent-amber);
+    color: var(--bg-space);
+    border-color: transparent;
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
+    transform: translateY(-1px);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .services-section {
+      padding: 70px 16px;
+    }
+  }
+</style>

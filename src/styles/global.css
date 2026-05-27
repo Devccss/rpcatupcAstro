@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================================================
+   DESIGN SYSTEM VARIABLES (rpc atupc - Tech Minimalist Cyber Theme)
+   ========================================================================== */
+:root {
+  /* Color Palette - Minimalist Tech & Sci-Fi Amber */
+  --bg-space: #222222;        /* Deep spatial space black */
+  --bg-matte: #4b4b4b;        /* Matte dark charcoal panel */
+  --bg-panel: #12131A;        /* Inner panel charcoal */
+  --accent-white: #d3d3d3;    /* High-contrast pure white block */
+  --accent-amber: rgba(255, 111, 15, 0.932);    /* Neon high-performance orange/amber */
+  --accent-amber-glow: rgba(5, 255, 5, 0.801);
+  --accent-amber-dim: #0066ff;
+  
+  /* Text Colors */
+  --text-pure: #FFFFFF;
+  --text-primary: #ECEFF4;
+  --text-muted: #8E96A5;
+  --text-dark: #07080A;       /* For text on white blocks */
+  
+  /* Typography */
+  --font-tech: 'Orbitron', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Borders & Shadows */
+  --border-glow: 1px solid rgba(0, 255, 234, 0.911);
+  --border-subtle: 1px solid rgba(255, 255, 255, 0.05);
+  --border-white: 1px solid rgba(255, 255, 255, 0.1);
+  --shadow-glow: 0 0 20px rgba(30, 255, 0, 0.76);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  /* Corner Radius */
+  --radius-pill: 9999px;
+  --radius-extreme: 40px;
+  --radius-card: 24px;
+  --radius-inner: 16px;
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease;
+}
+
+/* ==========================================================================
+   BASE & RESET
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-space);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background: radial-gradient(circle at 50% -20%, rgba(196, 196, 196, 0.281) 0%, transparent 60%),
+              radial-gradient(circle at 10% 50%, rgba(136, 104, 104, 0.425) 0%, transparent 40%),
+              var(--bg-space);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-space);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-matte);
+  border: 2px solid var(--bg-space);
+  border-radius: var(--radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-amber);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-amber);
+  color: var(--bg-space);
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-tech);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text-pure);
+}
+
+p {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+/* ==========================================================================
+   FUTURISTIC & CURVY LAYOUT PATTERNS
+   ========================================================================== */
+
+/* Main Sci-Fi Dashboard Frame */
+.dashboard-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+/* Modular Console Panel */
+.console-panel {
+  background: var(--bg-matte);
+  border: var(--border-subtle);
+  border-radius: var(--radius-extreme);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-glass);
+  transition: var(--transition-smooth);
+}
+
+.console-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+}
+
+/* Panel hover glowing effect */
+.console-panel.interactive:hover {
+  border-color: rgba(255, 107, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 107, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+/* High Contrast Accent Panel (Pure White Block like GLITCH theme) */
+.accent-panel {
+  background: var(--accent-white);
+  color: var(--text-dark);
+  border-radius: var(--radius-extreme);
+  padding: 40px;
+  position: relative;
+}
+
+.accent-panel h1, .accent-panel h2, .accent-panel h3 {
+  color: var(--text-dark);
+}
+
+.accent-panel p {
+  color: rgba(7, 8, 10, 0.7);
+}
+
+/* Smooth Curved Transitions (Negative Border Radius/Inside Corners) */
+.curved-corner-top-right {
+  position: relative;
+}
+
+/* Tech Grid Pattern Overlay */
+.tech-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.007) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.007) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   UI COMPONENTS & BUTTONS
+   ========================================================================== */
+
+/* Capsule Pill Button */
+.btn-pill {
+  font-family: var(--font-tech);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-pill.primary {
+  background: var(--accent-amber);
+  color: var(--bg-space);
+}
+
+.btn-pill.primary:hover {
+  background: var(--text-pure);
+  box-shadow: 0 0 25px var(--accent-amber);
+  transform: scale(1.03);
+}
+
+.btn-pill.secondary {
+  background: transparent;
+  color: var(--text-pure);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.btn-pill.secondary:hover {
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+  box-shadow: 0 0 15px rgba(255, 107, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.btn-pill.dark {
+  background: var(--bg-space);
+  color: var(--text-pure);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-pill.dark:hover {
+  background: var(--accent-amber);
+  color: var(--bg-space);
+  border-color: transparent;
+  box-shadow: 0 0 15px rgba(224, 224, 224, 0.3);
+}
+
+.btn-pill.light-accent {
+  background: var(--text-dark);
+  color: var(--text-pure);
+}
+
+.btn-pill.light-accent:hover {
+  background: var(--accent-amber);
+  color: var(--bg-space);
+  box-shadow: 0 0 15px rgba(9, 255, 0, 0.4);
+}
+
+/* Glow Badge Indicator */
+.glow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 107, 0, 0.08);
+  border: 1px solid rgba(255, 107, 0, 0.2);
+  color: var(--accent-amber);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-tech);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.glow-badge .dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-amber);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-amber);
+  animation: pulse-glow 2s infinite alternate;
+}
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+@keyframes pulse-glow {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.5;
+    box-shadow: 0 0 2px var(--accent-amber);
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+    box-shadow: 0 0 10px var(--accent-amber);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  :root {
+    --radius-extreme: 32px;
+  }
+  .console-panel {
+    padding: 30px;
+  }
+  .accent-panel {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --radius-extreme: 24px;
+  }
+  .console-panel {
+    padding: 24px;
+  }
+  .accent-panel {
+    padding: 24px;
+  }
+}

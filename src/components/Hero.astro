@@ -1,0 +1,367 @@
+---
+---
+
+<section class="hero-section" id="inicio">
+  <div class="hero-wrapper">
+
+    <!-- LEFT: Main title panel (dark big block) -->
+    <div class="hero-left">
+      <div class="glow-badge">
+        <span class="dot"></span>
+        Servicio Técnico Especializado · Concepción
+      </div>
+      <h1 class="hero-title">
+        RENDIMIENTO<br/>
+        <span class="title-accent">MÁXIMO.</span><br/>
+        <span class="title-redefined">REDEFINIDO.</span>
+      </h1>
+      <p class="hero-desc">
+        Tu computador merece más. Reparaciones, upgrades y optimizaciones de élite
+        para que tu hardware alcance su verdadero potencial.
+      </p>
+      <div class="hero-cta-row">
+        <a href="#contacto" class="btn-pill primary hero-btn-main">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.099.546 4.07 1.499 5.786L0 24l6.394-1.679A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.013-1.373l-.36-.214-3.732.979.998-3.648-.235-.374A9.818 9.818 0 1 1 12 21.818z"/></svg>
+          Cotizar por WhatsApp
+        </a>
+        <a href="#servicios" class="btn-pill secondary hero-btn-secondary">
+          Ver Servicios
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+        </a>
+      </div>
+      <!-- Stats bar -->
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Equipos reparados</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">98%</span>
+          <span class="stat-label">Satisfacción</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">24h</span>
+          <span class="stat-label">Respuesta rápida</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Image panel (white frame block) -->
+    <div class="hero-right">
+      <div class="hero-img-container">
+        <div class="hero-img-frame">
+          <img src="/hero-pc.png" alt="PC de alto rendimiento rpc atupc" class="hero-img" />
+          <!-- Annotation labels (sci-fi style) -->
+          <div class="annotation top-left">
+            <span class="annotation-label">DIAGNÓSTICO DE HARDWARE</span>
+            <div class="annotation-line"></div>
+          </div>
+          <div class="annotation bottom-right">
+            <div class="annotation-line-rev"></div>
+            <span class="annotation-label">UPGRADE & OPTIMIZACIÓN</span>
+          </div>
+        </div>
+        <!-- Side white accent block (like "SHOP NOW" in reference) -->
+        <div class="hero-side-badge">
+          <span class="badge-text">SOLICITAR<br/>AHORA</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    padding: 120px 20px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Background Ambient Orbs */
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -100px;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.06) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.04) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+
+  /* ---- LEFT SIDE ---- */
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 5.5vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    color: var(--text-pure);
+    text-transform: uppercase;
+  }
+
+  .title-accent {
+    color: var(--accent-amber);
+    -webkit-text-stroke: 0;
+    text-shadow: 0 0 40px rgba(255, 107, 0, 0.4);
+  }
+
+  .title-redefined {
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+  }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    max-width: 480px;
+    font-weight: 400;
+  }
+
+  .hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .hero-btn-main {
+    padding: 16px 32px;
+    font-size: 0.9rem;
+    box-shadow: 0 0 30px rgba(255, 107, 0, 0.25);
+  }
+
+  .hero-btn-secondary {
+    padding: 15px 28px;
+    font-size: 0.9rem;
+  }
+
+  /* Stats Bar */
+  .stats-bar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 24px 30px;
+    background: var(--bg-matte);
+    border: var(--border-subtle);
+    border-radius: var(--radius-card);
+    width: fit-content;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stat-num {
+    font-family: var(--font-tech);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--accent-amber);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  /* ---- RIGHT SIDE ---- */
+  .hero-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .hero-img-container {
+    position: relative;
+    width: 100%;
+    max-width: 580px;
+  }
+
+  .hero-img-frame {
+    background: var(--bg-matte);
+    border: var(--border-subtle);
+    border-radius: var(--radius-extreme);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4 / 3;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 60px rgba(255,107,0,0.04);
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: var(--radius-extreme);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hero-img-frame:hover .hero-img {
+    transform: scale(1.03);
+  }
+
+  /* Annotation labels */
+  .annotation {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+  }
+
+  .annotation.top-left {
+    top: 28px;
+    left: 24px;
+  }
+
+  .annotation.bottom-right {
+    bottom: 28px;
+    right: 24px;
+  }
+
+  .annotation-label {
+    font-family: var(--font-tech);
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--text-pure);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    background: rgba(7, 8, 10, 0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 5px 12px;
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+  }
+
+  .annotation-line, .annotation-line-rev {
+    height: 1px;
+    width: 30px;
+    background: rgba(255,255,255,0.3);
+    flex-shrink: 0;
+  }
+
+  /* White side badge (like "Shop Now" in reference) */
+  .hero-side-badge {
+    position: absolute;
+    bottom: -16px;
+    right: -16px;
+    background: var(--accent-white);
+    color: var(--text-dark);
+    padding: 16px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+  }
+
+  .hero-side-badge:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4), 0 0 20px rgba(255,107,0,0.2);
+    background: var(--accent-amber);
+    color: var(--bg-space);
+  }
+
+  .badge-text {
+    font-family: var(--font-tech);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    line-height: 1.3;
+  }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 1024px) {
+    .hero-wrapper {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .hero-right {
+      justify-content: center;
+    }
+
+    .hero-img-container {
+      max-width: 100%;
+    }
+
+    .hero-side-badge {
+      right: 8px;
+      bottom: -10px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero-section {
+      padding: 100px 16px 48px;
+    }
+
+    .stats-bar {
+      width: 100%;
+      justify-content: space-around;
+      padding: 18px 16px;
+    }
+
+    .hero-cta-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hero-btn-main, .hero-btn-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>

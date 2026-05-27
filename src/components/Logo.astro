@@ -1,0 +1,76 @@
+---
+interface Props {
+  class?: string;
+  width?: string | number;
+  height?: string | number;
+}
+
+const { class: className = "", width = "120", height = "75" } = Astro.props;
+---
+
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0 0 320 200" 
+  width={width} 
+  height={height} 
+  fill="none"
+  class={`logo-svg ${className}`}
+>
+  <g fill="currentColor">
+    <!-- ROW 1: "rpc" -->
+    <!-- LETTER R -->
+    <rect x="30" y="30" width="28" height="70" rx="14" />
+    <rect x="42" y="30" width="45" height="28" rx="14" />
+    <circle cx="80" cy="55" r="14" />
+
+    <!-- LETTER P -->
+    <rect x="105" y="30" width="28" height="70" rx="14" />
+    <!-- P loop overlay connector -->
+    <path d="M 125 30 H 155 C 168 30, 168 78, 155 78 H 125 Z M 133 46 V 62 H 145 C 151 62, 151 46, 145 46 Z" fill-rule="evenodd" />
+
+    <!-- LETTER C -->
+    <path d="M 235 30 H 205 C 188 30, 188 100, 205 100 H 235 C 243 100, 245 88, 235 88 H 208 C 200 88, 200 42, 208 42 H 235 C 245 42, 243 30, 235 30 Z" fill-rule="evenodd" />
+
+    <!-- ROW 2: "ätupc" -->
+    <!-- LETTER ä -->
+    <rect x="30" y="130" width="22" height="40" rx="11" />
+    <rect x="40" y="148" width="24" height="22" rx="11" />
+    <circle cx="34" cy="114" r="5.5" />
+    <circle cx="48" cy="114" r="5.5" />
+
+    <!-- LETTER t -->
+    <rect x="76" y="122" width="22" height="48" rx="11" />
+    <rect x="68" y="134" width="34" height="20" rx="10" />
+
+    <!-- LETTER u -->
+    <rect x="114" y="130" width="22" height="32" rx="11" />
+    <rect x="138" y="130" width="22" height="40" rx="11" />
+    <rect x="122" y="148" width="26" height="22" rx="11" />
+
+    <!-- LETTER p -->
+    <rect x="172" y="130" width="22" height="40" rx="11" />
+    <rect x="180" y="130" width="24" height="28" rx="11" />
+
+    <!-- LETTER c -->
+    <rect x="216" y="130" width="22" height="40" rx="11" />
+    <rect x="226" y="130" width="20" height="20" rx="10" />
+    <rect x="226" y="150" width="20" height="20" rx="10" />
+  </g>
+</svg>
+
+<style>
+  .logo-svg {
+    display: inline-block;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    color: var(--text-pure);
+  }
+  
+  :global(.header-white-bar) .logo-svg {
+    color: var(--text-dark);
+  }
+
+  .logo-svg:hover {
+    filter: drop-shadow(0 0 8px var(--accent-amber));
+    transform: scale(1.02);
+  }
+</style>
